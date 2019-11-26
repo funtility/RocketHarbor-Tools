@@ -1,0 +1,194 @@
+﻿body {
+    display: grid;
+    grid-template-rows: 24px 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.head {
+    text-align: center;
+    font-size: 24px;
+    padding: 6px 0;
+}
+
+.actions {
+    padding: 6px;
+    border-top: solid 1px #dddddd;
+    border-bottom: solid 1px #dddddd;
+    margin-bottom: 6px;
+}
+
+.number {
+    text-align: right;
+    padding-right: 4px;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.tab-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    z-index: 1;
+}
+
+.tab {
+    cursor: pointer;
+    margin: 4px 2px 0 2px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: solid 1px #CCC;
+    border-bottom: none;
+    color: #CCC;
+    text-align: center;
+}
+
+.tab-content {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 18px;
+}
+
+.active-tab {
+    border-color: black;
+    color: black;
+    border-bottom: solid 1px white;
+    margin-bottom: -1px;
+}
+
+.selectable {
+    cursor: pointer;
+    border: solid 1px rgba(0, 0, 0, 0);
+}
+
+.selectable:hover {
+    background-color: #dedede;
+}
+
+.selected {
+    border: solid 1px #00969b;
+}
+
+.tab-content .col {
+    display: grid;
+    grid-template-rows: 40px 41px 1fr;
+}
+
+.col {
+    border: solid 1px #DDD;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.container {
+    height: 644px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#tabConfigContent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 12px;
+}
+
+    #tabConfigContent.hide {
+        display: none;
+    }
+
+.map-select {
+    display: grid;
+    grid-template-rows: 24px 1fr;
+}
+
+.item-search-result {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+.feast-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+.config-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    padding-bottom: 4px;
+}
+
+.feast-list-location {
+    font-size: 20px;
+}
+
+.feast-list-item {
+    display: grid;
+    grid-template-columns: 40px 40px 1fr 24px;
+    font-size: 14px;
+}
+
+.btn-delete {
+    color: #8a0000;
+    cursor: pointer;
+}
+
+    .btn-delete:hover {
+        color: #ff0000;
+        font-weight: 600;
+    }
+
+.modal {
+    z-index: 2;
+    position: fixed;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.2);
+}
+
+.modal-content {
+    display: grid;
+    grid-template-rows: 24px 1fr;
+    grid-gap: 12px;
+    padding: 12px;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 12px;
+    background-color: rgba(255,255,255,.95);
+    height: 100%;
+    box-shadow: 0 0 24px #00adee, 0 0 12px #00adee, 0 0 6px #00adee, 0 0 3px #00adee;
+}
+
+.modal-close {
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #00adee;
+    width: 13px;
+    padding: 4px 5px 5px 7px;
+    border-radius: 50%;
+}
+
+.modal-message {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+}

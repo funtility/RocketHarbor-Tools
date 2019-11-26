@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Site.css">
+    <title></title>
+</head>
+<body>
+    <div class="tab-bar">
+        <!--<div class="tab" id="tabItems">Items</div>-->
+        <div class="tab active-tab" id="tabConfig">Feast List</div>
+    </div>
+    <div id="tabItemsContent" class="tab-content hide">
+        <!--<input type="file" id="importItems"/>-->
+    </div>
+    <div id="tabConfigContent" class="tab-content">
+        <div class="col">
+            <div class="head">Config</div>
+            <div class="actions">
+                <button id="reset">Reset All</button>
+            </div>
+            <div id="configItems"></div>
+        </div>
+        <div class="col">
+            <div class="head">Map / Location</div>
+            <div class="actions">
+                <select id="map" style="width:100%">
+                    <option value="-1">-- Select --</option>
+                </select>
+            </div>
+            <div class="map-select">
+                <div id="locations" class="container"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="head">Item</div>
+            <div class="actions">
+                <input id="itemSearch" type="text" placeholder="Search by Id or Name" onmouseup="searchItems(this);" style="width:100%" />
+            </div>
+            <div id="itemSearchResult" class="container"></div>
+        </div>
+        <div class="col">
+            <div id="feastItem" class="head" data-id="" data-name="" data-chance="" data-location="">Feast Item</div>
+            <div class="actions">
+                <button id="addToFeastList">Add to Feast List</button>
+            </div>
+            <div>
+                <div class="feast-item">
+                    <div class="number">ID:&nbsp;</div>
+                    <div id="feastItem-id"></div>
+                </div>
+                <div class="feast-item">
+                    <div class="number">Name:&nbsp;</div>
+                    <div id="feastItem-name"></div>
+                </div>
+                <div class="feast-item">
+                    <div class="number">Chance:&nbsp;</div>
+                    <input type="number" id="feastItem-chance" />
+                </div>
+                <div class="feast-item">
+                    <div class="number">Location:&nbsp;</div>
+                    <div id="feastItem-location"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="head">Feast List</div>
+            <div class="actions">
+                <button id="generateXML">Generate XML</button>
+            </div>
+            <div id="feastListResults">
+                <div id="feastListItems" class="container"></div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal hide">
+        <div class="modal-content" id="modalContent">
+            <div class="modal-close" id="modalClose">X</div>
+            <div class="modal-message" id="modalMessage">Test message</div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="Locations.js"></script>
+<script src="Items.js"></script>
+<script src="Configuration.js"></script>
+<script src="Feast.js"></script>
